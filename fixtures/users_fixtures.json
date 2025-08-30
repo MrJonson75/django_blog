@@ -1,0 +1,38 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "alice",
+      "email": "alice@example.com",
+      "password": "pbkdf2_sha256$260000$test$hash",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "bob",
+      "email": "bob@example.com",
+      "password": "pbkdf2_sha256$260000$test$hash",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "username": "charlie",
+      "email": "charlie@example.com",
+      "password": "pbkdf2_sha256$260000$test$hash",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true
+    }
+  }
+]
