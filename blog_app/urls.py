@@ -10,4 +10,7 @@ urlpatterns = [
     path("categories/", views.category_list, name="category_list"),  # 👈 добавляем
     path("tag/<slug:slug>/", views.tag_detail, name="tag_detail"),  # посты по тегу
     path("about/", views.about, name="about"),  # статическая страница "О блоге"
+
+
+    path("signup/", views.signup, name="signup"), # регистрация
 ]

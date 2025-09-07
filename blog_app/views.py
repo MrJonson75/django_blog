@@ -1,8 +1,9 @@
 import datetime
 import os
 
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, redirect
+from django.contrib.auth import login
 from .models import Post
 
 # Create your views here.
@@ -32,3 +33,13 @@ def about(request):
     pass
 
 
+def signup(request):
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)  # автоматический вход
+            return redirect("blog_app:home")
+    else:
+        form = UserCreationForm()
+    return render(request, "registration/signup.html", {"form": form})
